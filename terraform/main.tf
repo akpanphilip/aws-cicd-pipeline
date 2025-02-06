@@ -12,7 +12,7 @@ data "aws_secretsmanager_secret" "github_token" {
 
 resource "aws_secretsmanager_secret_version" "github_token" {
   secret_id     = data.aws_secretsmanager_secret.github_token.id
-  # Replace with your actual GitHub token
+  secret_string = "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"  # Replace with your actual GitHub token
 }
 
 resource "aws_iam_role" "codebuild_role" {
